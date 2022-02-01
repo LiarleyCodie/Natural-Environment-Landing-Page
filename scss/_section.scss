@@ -1,0 +1,44 @@
+.main {
+  color: #fff;
+  font-family: $montserrat-font;
+  position: relative;
+
+  padding: 5% 7%;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 0.8rem 0;
+  }
+
+  p {
+    font-size: 0.9rem;
+    font-weight: 200;
+    width: fit-content;
+    line-height: 200%;
+  }
+
+  button.explore {
+    border-style: none;
+    outline: none;
+    cursor: pointer;
+    height: 3rem;
+    width: 8rem;
+    background-color: $main-color;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: #fff;
+    position: absolute;
+    left: 40%;
+    bottom: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 1.8rem;
+      position: absolute;
+      right: -15%;
+    }
+  }
+}
