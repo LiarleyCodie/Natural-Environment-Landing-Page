@@ -4,9 +4,9 @@
 
 ---
 
-## **Como vou estruturar?**
+## **Estrutura do Layout**
 
-De casa tive problema com isso. Eu usei Grid, todavia, não tinha certeza de como organizaria cada parte do layout. Aí, para resolver esse problema, refiz todo o Layout no Figma.
+De cara tive problema com isso. Eu usei Grid, todavia, não tinha certeza de como organizaria cada parte do layout. Aí, para resolver esse problema, refiz todo o Layout no Figma.
 
 ---
 
