@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  text-decoration: none;
 }
 
 body {
@@ -67,5 +68,68 @@ body {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1/4;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10%;
+}
+
+.navbar .logo {
+  color: #fff;
+  font-size: 1.6rem;
+  font-family: "Saira", sans-serif;
+  font-weight: 600;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+.navbar .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .list .item.icon:nth-child(5) {
+  margin-left: 2.4rem;
+}
+
+.navbar .list .item.icon svg {
+  width: 1.4rem;
+  color: #fff;
+}
+
+.navbar .list .item .link {
+  font-size: 1.1rem;
+  padding: 0.4rem 1rem;
+  font-family: "Saira", sans-serif;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: color 150ms ease;
+  transition: color 150ms ease;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.navbar .list .item .link:hover {
+  color: #fff;
 }
 /*# sourceMappingURL=import.css.map */
