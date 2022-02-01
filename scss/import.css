@@ -202,6 +202,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer-left .wrapper {
@@ -229,5 +235,44 @@ body {
 .footer-left .wrapper .name {
   font-size: 0.9rem;
   font-weight: 700;
+}
+
+.footer-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-right button {
+  width: 3rem;
+  height: 3rem;
+  outline: none;
+  border-style: none;
+  background: #f61f4b;
+  border-radius: 100%;
+  cursor: pointer;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.footer-right button:nth-child(2) {
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+
+.footer-right button svg {
+  width: 1.2rem;
+  color: #fff;
+}
+
+.footer-right button:not(:first-child) {
+  margin-left: 1.4rem;
 }
 /*# sourceMappingURL=import.css.map */
