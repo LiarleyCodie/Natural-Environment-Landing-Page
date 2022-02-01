@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Saira:wght@600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -114,6 +114,12 @@ body {
 .navbar .list .item.icon svg {
   width: 1.4rem;
   color: #fff;
+  -webkit-transition: color 150ms ease;
+  transition: color 150ms ease;
+}
+
+.navbar .list .item.icon svg:hover {
+  color: #f61f4b;
 }
 
 .navbar .list .item .link {
@@ -177,5 +183,51 @@ body {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 5%;
+}
+
+.footer-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-left .wrapper {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
+  font-style: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer-left .wrapper:not(:first-child) {
+  margin-left: 4rem;
+}
+
+.footer-left .wrapper .desc {
+  font-weight: 500;
+}
+
+.footer-left .wrapper .name {
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 /*# sourceMappingURL=import.css.map */

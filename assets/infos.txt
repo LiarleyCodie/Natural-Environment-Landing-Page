@@ -1,0 +1,8 @@
+background_1 {
+	"location": "Laghi di Fusine, Italy"
+}
+
+background_2 {
+	
+	"location": "Milano, Metropolitan City of Milan, Italy"
+}
