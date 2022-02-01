@@ -35,3 +35,46 @@
 }
 
 // ## Right
+.aside-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .count {
+    color: #fff;
+    font-family: $saira-font;
+    font-weight: 400;
+    font-size: 0.8rem;
+    writing-mode: vertical-lr;
+  }
+
+  .slider-wrapper {
+    margin: 1rem 0;
+    .line {
+      background: #fff;
+      width: 0.1rem;
+      height: 10rem;
+      position: relative;
+      border-radius: 1rem;
+
+      .position-actived {
+        width: 0.3rem;
+        height: 5rem;
+        background-color: $main-color;
+        border-radius: 1rem;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+
+        &.first {
+          top: 0;
+        }
+
+        &.second {
+          bottom: 0;
+        }
+      }
+    }
+  }
+}

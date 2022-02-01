@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Saira:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap");
 * {
@@ -183,6 +183,63 @@ body {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.aside-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aside-right .count {
+  color: #fff;
+  font-family: "Saira", sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+}
+
+.aside-right .slider-wrapper {
+  margin: 1rem 0;
+}
+
+.aside-right .slider-wrapper .line {
+  background: #fff;
+  width: 0.1rem;
+  height: 10rem;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.aside-right .slider-wrapper .line .position-actived {
+  width: 0.3rem;
+  height: 5rem;
+  background-color: #f61f4b;
+  border-radius: 1rem;
+  position: absolute;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.aside-right .slider-wrapper .line .position-actived.first {
+  top: 0;
+}
+
+.aside-right .slider-wrapper .line .position-actived.second {
+  bottom: 0;
 }
 
 .footer {
