@@ -1,0 +1,35 @@
+// ## Left
+.aside-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .link {
+    writing-mode: vertical-lr;
+    position: relative;
+    color: #fff;
+    font-family: $saira-font;
+    font-size: 1rem;
+    padding: 1rem 0;
+    transform: rotateZ(180deg);
+
+    &:first-child {
+      margin-bottom: 4rem;
+    }
+
+    &:last-child {
+      &::after {
+        content: "";
+        width: 0.35rem;
+        height: 2rem;
+        border-radius: 1rem;
+        position: absolute;
+        background-color: $main-color;
+        left: -50%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
