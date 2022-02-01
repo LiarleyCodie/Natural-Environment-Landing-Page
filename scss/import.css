@@ -13,6 +13,12 @@ body {
       grid-template-columns: 10% 80% 10%;
   -ms-grid-rows: 10% 70% 20%;
       grid-template-rows: 10% 70% 20%;
+  background-image: url("../assets/background.jpg");
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: soft-light;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .navbar {
