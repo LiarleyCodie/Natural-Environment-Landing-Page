@@ -6,10 +6,10 @@
   padding: 0;
   list-style-type: none;
   text-decoration: none;
-  font-smooth: always;
 }
 
 body {
+  overflow: hidden;
   min-height: 100vh;
   font-size: 62.5%;
   display: -ms-grid;
@@ -18,12 +18,26 @@ body {
       grid-template-columns: 10% 80% 10%;
   -ms-grid-rows: 10% 70% 20%;
       grid-template-rows: 10% 70% 20%;
-  background-image: url("../assets/background.jpg");
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+body .background {
+  background-image: url("../assets/background.jpg");
   background-blend-mode: soft-light;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+}
+
+body .background.second {
+  background-image: url("../assets/background2.jpg");
+  right: -100%;
+  -webkit-animation: unset;
+          animation: unset;
 }
 
 .navbar {
@@ -466,6 +480,25 @@ aside.aside-left a {
 aside.aside-left a:last-child {
   -webkit-animation-delay: 250ms;
           animation-delay: 250ms;
+}
+
+.background {
+  -webkit-animation: riseIn 2s ease backwards;
+          animation: riseIn 2s ease backwards;
+}
+
+@-webkit-keyframes riseIn {
+  0% {
+    -webkit-transform: scale(1.3) translateY(-4rem);
+            transform: scale(1.3) translateY(-4rem);
+  }
+}
+
+@keyframes riseIn {
+  0% {
+    -webkit-transform: scale(1.3) translateY(-4rem);
+            transform: scale(1.3) translateY(-4rem);
+  }
 }
 
 @-webkit-keyframes clickToGo {

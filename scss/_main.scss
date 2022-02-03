@@ -1,4 +1,6 @@
 body {
+  overflow: hidden;
+
   min-height: 100vh;
   font-size: 62.5%;
 
@@ -6,12 +8,25 @@ body {
   grid-template-columns: 10% 80% 10%;
   grid-template-rows: 10% 70% 20%;
 
-  background-image: url("../assets/background.jpg");
   background-color: rgba(0, 0, 0, 0.2);
-  background-blend-mode: soft-light;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
+  .background {
+    background-image: url("../assets/background.jpg");
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+
+    &.second {
+      background-image: url("../assets/background2.jpg");
+      right: -100%;
+      animation: unset;
+    }
+  }
 }
 
 .navbar {
