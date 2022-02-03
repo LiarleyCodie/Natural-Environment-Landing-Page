@@ -11,14 +11,17 @@
     color: #fff;
     font-family: $saira-font;
     font-size: 1rem;
-    padding: 1rem 0;
+    padding: 1rem;
     transform: rotateZ(180deg);
 
     &:first-child {
       margin-bottom: 4rem;
     }
 
-    &:last-child {
+    &:last-child,
+    &:first-child {
+      overflow: hidden;
+
       &::after {
         content: "";
         width: 0.35rem;
@@ -26,9 +29,16 @@
         border-radius: 1rem;
         position: absolute;
         background-color: $main-color;
-        left: -50%;
+        left: -10%;
         top: 50%;
         transform: translateY(-50%);
+        transition: left 250ms ease;
+      }
+
+      &:hover {
+        &::after {
+          left: 0;
+        }
       }
     }
   }

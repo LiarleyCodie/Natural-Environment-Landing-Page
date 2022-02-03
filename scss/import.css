@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Saira:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap");
 * {
   margin: 0;
   padding: 0;
   list-style-type: none;
   text-decoration: none;
+  font-smooth: always;
 }
 
 body {
@@ -163,7 +164,7 @@ body {
   color: #fff;
   font-family: "Saira", sans-serif;
   font-size: 1rem;
-  padding: 1rem 0;
+  padding: 1rem;
   -webkit-transform: rotateZ(180deg);
           transform: rotateZ(180deg);
 }
@@ -172,17 +173,27 @@ body {
   margin-bottom: 4rem;
 }
 
-.aside-left .link:last-child::after {
+.aside-left .link:last-child, .aside-left .link:first-child {
+  overflow: hidden;
+}
+
+.aside-left .link:last-child::after, .aside-left .link:first-child::after {
   content: "";
   width: 0.35rem;
   height: 2rem;
   border-radius: 1rem;
   position: absolute;
   background-color: #f61f4b;
-  left: -50%;
+  left: -10%;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  -webkit-transition: left 250ms ease;
+  transition: left 250ms ease;
+}
+
+.aside-left .link:last-child:hover::after, .aside-left .link:first-child:hover::after {
+  left: 0;
 }
 
 .aside-right {
@@ -257,7 +268,7 @@ body {
 
 .main p {
   font-size: 0.9rem;
-  font-weight: 200;
+  font-weight: 400;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -383,5 +394,139 @@ body {
 
 .footer-right button:not(:first-child) {
   margin-left: 1.4rem;
+}
+
+.main h2,
+.main h1,
+.main p,
+.main button {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-animation: riseToUp 1s ease backwards;
+          animation: riseToUp 1s ease backwards;
+}
+
+.main h2 {
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+
+.main h1 {
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
+}
+
+.main p {
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms;
+}
+
+.main button {
+  -webkit-animation-delay: 350ms;
+          animation-delay: 350ms;
+}
+
+.main button.explore svg {
+  -webkit-animation: clickToGo 1s ease infinite;
+          animation: clickToGo 1s ease infinite;
+}
+
+.footer .footer-left .wrapper {
+  -webkit-animation: riseToDown 1s backwards;
+          animation: riseToDown 1s backwards;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.footer .footer-left .wrapper:nth-child(1) {
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
+}
+
+.footer .footer-left .wrapper:nth-child(2) {
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms;
+}
+
+.footer .footer-left .wrapper:nth-child(3) {
+  -webkit-animation-delay: 350ms;
+          animation-delay: 350ms;
+}
+
+aside.aside-left {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+aside.aside-left a {
+  -webkit-animation: riseToLeft 1s ease backwards;
+          animation: riseToLeft 1s ease backwards;
+}
+
+aside.aside-left a:last-child {
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms;
+}
+
+@-webkit-keyframes clickToGo {
+  50% {
+    -webkit-transform: translateX(-0.4rem);
+            transform: translateX(-0.4rem);
+  }
+}
+
+@keyframes clickToGo {
+  50% {
+    -webkit-transform: translateX(-0.4rem);
+            transform: translateX(-0.4rem);
+  }
+}
+
+@-webkit-keyframes riseToUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
+  }
+}
+
+@keyframes riseToUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
+  }
+}
+
+@-webkit-keyframes riseToDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+}
+
+@keyframes riseToDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+}
+
+@-webkit-keyframes riseToLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2rem) rotateZ(180deg);
+            transform: translateX(-2rem) rotateZ(180deg);
+  }
+}
+
+@keyframes riseToLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2rem) rotateZ(180deg);
+            transform: translateX(-2rem) rotateZ(180deg);
+  }
 }
 /*# sourceMappingURL=import.css.map */

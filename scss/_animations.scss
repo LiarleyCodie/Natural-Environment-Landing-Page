@@ -1,0 +1,93 @@
+.main {
+  h2,
+  h1,
+  p,
+  button {
+    backface-visibility: hidden;
+    animation: riseToUp 1s ease backwards;
+  }
+
+  h2 {
+    animation-delay: 0;
+  }
+
+  h1 {
+    animation-delay: 150ms;
+  }
+
+  p {
+    animation-delay: 250ms;
+  }
+
+  button {
+    animation-delay: 350ms;
+
+    &.explore {
+      svg {
+        animation: clickToGo 1s ease infinite;
+      }
+    }
+  }
+}
+
+.footer {
+  .footer-left {
+    .wrapper {
+      animation: riseToDown 1s backwards;
+      backface-visibility: hidden;
+
+      &:nth-child(1) {
+        animation-delay: 150ms;
+      }
+
+      &:nth-child(2) {
+        animation-delay: 250ms;
+      }
+
+      &:nth-child(3) {
+        animation-delay: 350ms;
+      }
+    }
+  }
+}
+
+aside {
+  &.aside-left {
+    backface-visibility: hidden;
+
+    a {
+      animation: riseToLeft 1s ease backwards;
+
+      &:last-child {
+        animation-delay: 250ms;
+      }
+    }
+  }
+}
+
+@keyframes clickToGo {
+  50% {
+    transform: translateX(-0.4rem);
+  }
+}
+
+@keyframes riseToUp {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+}
+
+@keyframes riseToDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+}
+
+@keyframes riseToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-2rem) rotateZ(180deg);
+  }
+}
